@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Operation With Pure JavaScript Using Ajax</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <!--html Form For CRUD Operation-->
+          <form
+            onsubmit="event.preventDefault(); onFormSubmit();"
+            autocomplete="on"
+          >
+            <div>
+              <label>Full Name*</label
+              ><label class="validation-error hide" id="fullNameValidationError"
+                >This Field is Mandatory</label
+              >
+              <input type="text" name="fullName" id="fullName" />
+            </div>
+            <div>
+              <label>Student ID</label>
+              <input type="text" name="stdId" id="stdId" />
+            </div>
+            <div>
+              <label>Total Grade</label>
+              <input type="text" name="tGrade" id="tGrade" />
+            </div>
+            <div>
+              <label>Branch</label>
+              <input type="text" name="branch" id="branch" />
+            </div>
+            <div class="form-action-buttons">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </td>
+        <td>
+          <!--table to list all records-->
+          <table class="list" id="studentList">
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>Student ID</th>
+                <th>Total Grade</th>
+                <th>Branch</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>
